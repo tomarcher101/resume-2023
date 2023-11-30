@@ -1,0 +1,25 @@
+@import "https://fonts.googleapis.com/css?family=Share+Tech+Mono:300,400,800";
+@import "https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  // scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply text-white font-tech;
+}
+
+.vertical-timeline.vertical-timeline--animate.vertical-timeline--two-columns {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.project-description {
+  a {
+    @apply text-[#8374BB];
+  }
+}
