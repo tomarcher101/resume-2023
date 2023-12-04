@@ -7,7 +7,7 @@ import {
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
-import CanvasLoader from "./Loader";
+import Loader from "./Loader";
 
 const Avatar = () => {
   const group = useRef();
@@ -40,7 +40,7 @@ const AvatarCanvas = () => {
       gl={{ preserveDrawingBuffer: true }}
     >
       <PerspectiveCamera makeDefault position={[-0.1, 0.8, 3.3]} fov={40}/>
-      <Suspense fallback={<CanvasLoader />}>
+      <Suspense fallback={<Loader />}>
         <Avatar />
       </Suspense>
     </Canvas>

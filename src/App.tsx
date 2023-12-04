@@ -10,11 +10,11 @@ import {
   StarsCanvas,
 } from "@/components";
 import { Suspense } from "react";
-import CanvasLoader from "@/components/canvas/Loader";
+import Loader from "@/components/canvas/Loader";
 
 function App() {
   return (
-    <Suspense fallback={<CanvasLoader />}>
+    <Suspense fallback={<Loader />}>
       <BrowserRouter>
         <div className="relative z-0 bg-primary w-screen overflow-hidden">
           <Navbar />

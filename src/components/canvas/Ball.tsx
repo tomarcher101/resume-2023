@@ -7,7 +7,7 @@ import {
   Preload,
   useTexture,
 } from "@react-three/drei";
-import CanvasLoader from "./Loader";
+import Loader from "./Loader";
 
 interface BallProps {
   imgUrl: string;
@@ -40,7 +40,7 @@ const Ball = ({ imgUrl }: BallProps) => {
 const BallCanvas = ({ icon }: BallCanvasProps) => {
   return (
     <Canvas frameloop="always" gl={{ preserveDrawingBuffer: true }}>
-      <Suspense fallback={<CanvasLoader />}>
+      <Suspense fallback={<Loader />}>
         <OrbitControls enableZoom={false} />
         <Ball imgUrl={icon} />
       </Suspense>
