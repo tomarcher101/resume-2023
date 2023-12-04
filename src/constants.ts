@@ -101,7 +101,7 @@ export const technologies: Technology[] = [
 
 export const experiences: Experience[] = [
   {
-    title: "Full Stack Engineer (frontend focus)",
+    title: "Full Stack Developer (frontend focus)",
     companyName: "PLAY",
     link: "https://play-studio.com",
     icon: play,
@@ -116,7 +116,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    title: "Full Stack Developer",
+    title: "Full Stack Software Engineer",
     companyName: "Dalton Maag",
     link: "https://daltonmaag.com",
     icon: daltonMaag,
@@ -195,18 +195,28 @@ export const projects: Project[] = [
     link: "https://campus.hundo.xyz",
     client: "hundo",
     clientLink: "https://hundo.xyz",
-    description:
-      "A online learning platform with goal of equipping Gen Z with digital skills. Built using NextJS, with an AWS Amplify Backend.",
+    description: `An online learning platform with goal of equipping Gen Z with digital skills.
+      Built using NextJS, with a serverless AWS Amplify Backend and Contenful as the CMS.
+      Allowed for metaverse intergration with ThreeJS and ReadyPlayerMe.`,
     imageType: "desktop",
     images: [hundoHomepage],
-    tags: ["React", "NextJS", "TypeScript", "AWS Amplify", "GraphQL"],
+    tags: [
+      "React",
+      "NextJS",
+      "TypeScript",
+      "AWS Amplify",
+      "GraphQL",
+      "Contentful",
+    ],
   },
   {
     name: "Virtual Escape Room",
     client: "PwC",
     clientLink: "https://www.pwc.co.uk/",
-    description:
-      "A multiplayer point and click Escape Room game and accompanying game creator tool. Built using Phaser and React, leveraging web hooks and an authoritative server architecture.",
+    description: `A multiplayer point and click Escape Room game and accompanying game creator tool.
+      The creator tool allowed the client to create their own custom escape rooms, where they could customise the puzzles and add quizzes.
+      Sessions could be created allowing for multiple players to play together.
+      Built using Phaser and React, leveraging web hooks and an authoritative server architecture.`,
     imageType: "desktop",
     images: [escapeRoomQuiz],
     tags: ["React", "Phaser", "TypeScript", "NestJS"],
@@ -227,8 +237,10 @@ export const projects: Project[] = [
     link: "https://ded1.co",
     client: "Demilitarise Education",
     clientLink: "https://ded1.co",
-    description:
-      "Helped a friend build her charity’s website. Oversaw a redesign, taking responsibility for the front end.",
+    description: `Helped a friend build her charity’s website.
+      The website allows for users to contribute together on a database that tracks university spending.
+      It uses NextJS with TailwindCSS on the FE and Django on the BE.
+      I oversaw a redesign, taking responsibility for the front end.`,
     imageType: "desktop",
     images: [dedHomepage],
     tags: ["React", "NextJS", "TypeScript", "TailwindCSS", "Python", "Django"],
