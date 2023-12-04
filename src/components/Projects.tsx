@@ -22,8 +22,8 @@ const ProjectCard = ({
     <motion.div
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true }}
-      variants={fadeIn("up", 0.25 * index, 1)}
+      viewport={{ once: true, amount: 0.1 }}
+      variants={fadeIn("up", (index % 2) * 0.25, 1)}
       className="col-span-2 flex h-full flex-col justify-between gap-5 rounded-2xl bg-card p-8 lg:col-span-1"
     >
       <div>
