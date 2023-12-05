@@ -33,10 +33,13 @@ const ProjectCard = ({
         <a href={clientLink} target="_blank">
           <p className="font-tech text-xl text-secondary">{client}</p>
         </a>
-        <Markdown className={`${styles.cardText} mt-3 project-description`}>{description}</Markdown>
+        <Markdown className={`${styles.cardText} project-description mt-3`}>
+          {description}
+        </Markdown>
         <div className="mt-3 flex flex-wrap gap-2">
-          {tags.map((tag) => (
+          {tags.map((tag: string, index: number) => (
             <motion.div
+              key={index}
               whileHover={{ scale: 1.2 }}
               className="rounded-md bg-secondary px-2 py-1 text-xs text-black"
             >
@@ -46,9 +49,12 @@ const ProjectCard = ({
         </div>
       </div>
       <div className="flex justify-between gap-4">
-        {images.map((image: string) => (
-          <Tilt tiltReverse className="hover:z-[9999]">
-            <motion.div initial={{ scale: 1 }} whileHover={{ scale: imageType === "mobile" ? 1.5 : 1.2 }}>
+        {images.map((image: string, index: number) => (
+          <Tilt tiltReverse className="hover:z-[9999]" key={index}>
+            <motion.div
+              initial={{ scale: 1 }}
+              whileHover={{ scale: imageType === "mobile" ? 1.5 : 1.2 }}
+            >
               <img
                 src={image}
                 alt={name}
@@ -70,7 +76,7 @@ const Projects = () => {
         <h2 className={styles.sectionHeadText}>Projects</h2>
       </motion.div>
       <div className="mt-12 grid grid-cols-2 items-center gap-4">
-        {projects.map((project, index) => (
+        {projects.map((project: Project, index: number) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>

@@ -1,15 +1,14 @@
-import React, { useRef } from "react";
+import { styles } from "@/styles";
+import { experiences } from "@/constants";
+import { textVariant } from "@/utils/motion";
+import SectionWrapper from "@/hoc/SectionWrapper";
+import { Experience as TExperience } from "@/types";
+import { motion } from "framer-motion";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import { motion, useAnimation, useInView } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
-
-import { styles } from "@/styles";
-import { experiences } from "@/constants";
-import { fadeIn, textVariant, zoomIn } from "@/utils/motion";
-import SectionWrapper from "@/hoc/SectionWrapper";
 
 interface ExperienceCardProps {
   date: string;
@@ -92,7 +91,7 @@ const Experience = () => {
         className="mt-10"
       >
         <VerticalTimeline>
-          {experiences.map((experience, index) => (
+          {experiences.map((experience: TExperience, index: number) => (
             <ExperienceCard
               key={index}
               date={experience.date}

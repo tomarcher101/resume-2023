@@ -12,6 +12,7 @@ import {
   git,
   figma,
   docker,
+  nextjs,
 } from "@/assets/tech";
 import { codeCamp, daltonMaag, fireTech, play, plum } from "@/assets/companies";
 import escapeRoomQuiz from "@/assets/projects/escape-rooms/quiz.png";
@@ -60,6 +61,10 @@ export const technologies: Technology[] = [
   {
     name: "React",
     icon: reactjs,
+  },
+  {
+    name: "NextJS",
+    icon: nextjs,
   },
   {
     name: "Redux",

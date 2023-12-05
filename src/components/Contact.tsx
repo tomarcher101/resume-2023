@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { styles } from "@/styles";
-import { fadeIn, slideIn, textVariant } from "@/utils/motion";
-import Phone from "./canvas/Phone";
+import { fadeIn, textVariant } from "@/utils/motion";
 import SectionWrapper from "@/hoc/SectionWrapper";
 
 const Contact = () => {

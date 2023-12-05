@@ -14,22 +14,20 @@ import Loader from "@/components/canvas/Loader";
 
 function App() {
   return (
-    <Suspense fallback={<Loader />}>
-      <BrowserRouter>
-        <div className="relative z-0 bg-primary w-screen overflow-hidden">
-          <Navbar />
-          <div className="w-screen h-screen fixed">
-            <StarsCanvas />
-          </div>
-          <Hero/>
-          <About/>
-          <Experience />
-          <Tech />
-          <Works />
-          <Contact />
+    <BrowserRouter>
+      <div className="relative z-0 w-screen overflow-hidden bg-primary">
+        <Navbar />
+        <div className="fixed h-screen w-screen">
+          <StarsCanvas />
         </div>
-      </BrowserRouter>
-    </Suspense>
+        <Hero />
+        <About />
+        <Experience />
+        <Tech />
+        <Works />
+        <Contact />
+      </div>
+    </BrowserRouter>
   );
 }
 
