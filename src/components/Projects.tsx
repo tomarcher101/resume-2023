@@ -33,7 +33,7 @@ const ProjectCard = ({
         <a href={clientLink} target="_blank">
           <p className="font-tech text-xl text-secondary">{client}</p>
         </a>
-        <Markdown className={`${styles.cardText} project-description mt-3`}>
+        <Markdown className={`${styles.cardText} markdown project-description mt-3`}>
           {description}
         </Markdown>
         <div className="mt-3 flex flex-wrap gap-2">
@@ -48,7 +48,7 @@ const ProjectCard = ({
           ))}
         </div>
       </div>
-      <div className="flex justify-between gap-4">
+      <div className="flex justify-evenly gap-4">
         {images.map((image: string, index: number) => (
           <Tilt tiltReverse className="hover:z-[9999]" key={index}>
             <motion.div
@@ -72,8 +72,8 @@ const Projects = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>My Work</p>
-        <h2 className={styles.sectionHeadText}>Projects</h2>
+        <p className={styles.sectionSubheader}>My Work</p>
+        <h2 className={styles.sectionHeader}>Projects</h2>
       </motion.div>
       <div className="mt-12 grid grid-cols-2 items-center gap-4">
         {projects.map((project: Project, index: number) => (

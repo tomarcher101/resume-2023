@@ -8,12 +8,12 @@ const Contact = () => {
     <div className="flex flex-col items-center justify-center pb-20 sm:my-10 sm:flex-row">
       <div className="flex flex-col justify-center">
         <motion.div variants={textVariant()} className="text-center">
-          <p className={styles.sectionSubText}>Don't be a stranger!</p>
-          <h2 className={styles.sectionHeadText}>Contact</h2>
+          <p className={styles.sectionSubheader}>Don't be a stranger!</p>
+          <h2 className={styles.sectionHeader}>Contact</h2>
         </motion.div>
         <motion.div
           variants={fadeIn("left", 0.1, 1)}
-          className="flex flex-col gap-2 text-center"
+          className="flex flex-col gap-2 text-center mt-4"
         >
           <p className={styles.cardText}>AUS: +61 (0) 427 283 676</p>
           <p className={styles.cardText}>UK: +44 (0) 7508 236582</p>

@@ -80,8 +80,8 @@ const Experience = () => {
         variants={textVariant()}
         className="sm:mt-30"
       >
-        <p className={styles.sectionSubText}>My journey so far</p>
-        <h2 className={styles.sectionHeadText}>Experience</h2>
+        <p className={styles.sectionSubheader}>My journey so far</p>
+        <h2 className={styles.sectionHeader}>Experience</h2>
       </motion.div>
       <motion.div
         initial={{ opacity: 0 }}

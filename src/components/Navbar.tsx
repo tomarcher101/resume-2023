@@ -8,36 +8,6 @@ import close from "@/assets/close.svg";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
-  // const [activeNav, setActiveNav] = useState<string | undefined>(undefined);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const scrollPosition = window.scrollY;
-  //     const middleOfScreen = innerHeight / 2;
-  //     console.log(scrollPosition, "scrollPosition");
-  //     console.log(window.innerHeight, "innerHeight");
-  //     const navHeight = document.querySelector("nav")?.clientHeight;
-  //     const sectionPositions = navLinks.map((link) => {
-  //       const section = document.querySelector(`#${link.id}`);
-  //       if (section) {
-  //         return {
-  //           id: link.id,
-  //           position: section.getBoundingClientRect().top + scrollPosition,
-  //         };
-  //       }
-  //     });
-  //     const activeSection = sectionPositions.find(
-  //       (section) =>
-  //         section.position <= scrollPosition + navHeight! + middleOfScreen &&
-  //         section.position + navHeight! > scrollPosition + navHeight!,
-  //     );
-  //     if (activeSection) {
-  //       setActiveNav(activeSection.id);
-  //     }
-  //   };
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
 
   const variants = {
     menuOpen: { opacity: 1, right: 0 },
@@ -46,7 +16,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} fixed top-0 z-20 flex w-full items-center bg-primary py-3 sm:py-4`}
+      className={`fixed top-0 z-20 flex w-full items-center bg-primary px-6 py-3 sm:px-16 sm:py-4`}
     >
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between">
         <Link className="flex items-center gap-2 text-2xl font-bold" to="/">
@@ -86,6 +56,7 @@ const Navbar = () => {
               <li
                 key={link.id}
                 className={`text-md cursor-pointer font-medium text-secondary transition-colors duration-300 ease-in-out hover:text-white`}
+                onClick={() => setMobileMenuOpen(false)}
               >
                 <a href={`#${link.id}`}>{link.title}</a>
               </li>

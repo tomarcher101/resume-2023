@@ -1,6 +1,6 @@
 import SectionWrapper from "@/hoc/SectionWrapper";
 import { technologies } from "@/constants";
-import { BallCanvas } from "./canvas";
+import { BallCanvas } from "./three-js";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "@/utils/motion";
 import { styles } from "@/styles";
@@ -10,8 +10,8 @@ const Tech = () => {
   return (
     <div>
       <motion.div variants={textVariant()} className="mb-10 sm:mb-20">
-        <p className={styles.sectionSubText}>What I like to work with</p>
-        <h2 className={styles.sectionHeadText}>My Tech</h2>
+        <p className={styles.sectionSubheader}>What I like to work with</p>
+        <h2 className={styles.sectionHeader}>My Tech</h2>
       </motion.div>
       <motion.div
         className="flex flex-row flex-wrap justify-center gap-10"

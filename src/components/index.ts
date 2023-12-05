@@ -1,4 +1,4 @@
-import { BallCanvas, StarsCanvas } from './canvas';
+import { BallCanvas, StarsCanvas } from './three-js';
 import Hero from './Hero';
 import Navbar from './Navbar';
 import About from './About';

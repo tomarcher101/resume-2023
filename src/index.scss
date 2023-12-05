@@ -13,12 +13,18 @@ body {
   @apply text-white font-tech;
 }
 
+section {
+  // For jumping to section ids
+  scroll-margin-top: 60px;
+}
+
 .vertical-timeline.vertical-timeline--animate.vertical-timeline--two-columns {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-.project-description {
+// For styling the Markdown being rendered by react-markdown
+.markdown.project-description {
   a {
     @apply text-[#8374BB];
   }

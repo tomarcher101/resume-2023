@@ -13,14 +13,13 @@ const variants = {
 };
 
 const SectionWrapper =
-  (Component: React.FC, idName: string, fullscreen?: boolean) =>
-  (props: any) => (
+  (Component: React.FC, idName: string) => (props: any) => (
     <motion.section
       variants={variants}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.1 }}
-      className={`${styles.padding} relative z-0 mx-auto max-w-7xl box-border`}
+      className="relative z-0 mx-auto box-border max-w-7xl px-6 py-6 sm:px-16 sm:py-16"
       id={idName}
     >
       <Component {...props} />

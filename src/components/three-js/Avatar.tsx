@@ -7,7 +7,7 @@ import {
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
-import { Loader } from "@/components/canvas";
+import { Loader } from "@/components/three-js";
 
 const Avatar = () => {
   const group = useRef();
