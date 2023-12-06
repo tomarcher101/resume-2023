@@ -16,7 +16,6 @@ import {
 } from "@/assets/tech";
 import { codeCamp, daltonMaag, fireTech, play, plum } from "@/assets/companies";
 import escapeRoomQuiz from "@/assets/projects/escape-rooms/quiz.png";
-import escapeRoomGame from "@/assets/projects/escape-rooms/gameplay.png";
 import beyondJourney from "@/assets/projects/beyond-assessments/journey.png";
 import beyondAchievements from "@/assets/projects/beyond-assessments/achievements.png";
 import beyondResults from "@/assets/projects/beyond-assessments/results.png";
@@ -200,8 +199,8 @@ export const projects: Project[] = [
     link: "https://campus.hundo.xyz",
     client: "hundo",
     clientLink: "https://hundo.xyz",
-    description: `An online learning platform with goal of equipping Gen Z with digital skills.
-      Built using NextJS, with a serverless AWS Amplify Backend and Contenful as the CMS.
+    description: `An online learning platform with the goal of equipping Gen Z with digital skills.
+      Built using NextJS and AWS Amplify, with Contenful as the CMS.
       Allowed for metaverse intergration with ThreeJS and ReadyPlayerMe.`,
     imageType: "desktop",
     images: [hundoHomepage],
@@ -212,19 +211,8 @@ export const projects: Project[] = [
       "AWS Amplify",
       "GraphQL",
       "Contentful",
+      "ThreeJS",
     ],
-  },
-  {
-    name: "Virtual Escape Room",
-    client: "PwC",
-    clientLink: "https://www.pwc.co.uk/",
-    description: `A multiplayer point and click Escape Room game and accompanying game creator tool.
-      The creator tool allowed the client to create their own custom escape rooms, where they could customise the puzzles and add quizzes.
-      Sessions could be created allowing for multiple players to play together.
-      Built using Phaser and React, leveraging web hooks and an authoritative server architecture.`,
-    imageType: "desktop",
-    images: [escapeRoomQuiz],
-    tags: ["React", "Phaser", "TypeScript", "NestJS"],
   },
   {
     name: "Beyond: Assessments",
@@ -232,10 +220,36 @@ export const projects: Project[] = [
     client: "KPMG",
     clientLink: "https://kpmg.com/uk/en/home",
     description:
-      "An assessment tool for KPMG’s Beyond platform. A PWA built using NextJS, .NET and Azure Cloud Services, leveraging gamification techniques to make the experience more engaging.",
+      "An assessment tool for KPMG’s Beyond platform. A PWA built using NextJS and .NET, leveraging gamification techniques to make the experience more engaging.",
     imageType: "mobile",
     images: [beyondJourney, beyondAchievements, beyondResults],
     tags: ["React", "NextJS", "TypeScript"],
+  },
+  {
+    name: "My Nephrotic Notebook",
+    link: "https://www.goshdrive.com/academia#:~:text=MSc%20Project%202019-,My%20Nephrotic%20Notebook%20Mobile%20App,-Parents%20of%20children",
+    client: "Great Ormond Street Hospital",
+    clientLink: "https://www.gosh.org/",
+    description: `Led a team of three that designed and built a mobile application to help children with Nephrotic Syndrome manage their disease.
+      The project received top marks in our MSc cohort, was published and showcased by DRIVE at GOSH Conference 2019.
+      It also gave me a chance to explore UX/UI design for the first time. Amazingly, I was even [first authoured in a medical journal article!](https://adc.bmj.com/content/104/Suppl_4/A6.2)`,
+    imageType: "mobile",
+    images: [nephNoteSplash, nephNoteHomepage, nephNoteEnter],
+    tags: ["Typescript", "Ionic", "Angular"],
+  },
+  {
+    name: "Virtual Escape Room",
+    client: "PwC",
+    clientLink: "https://www.pwc.co.uk/",
+    description: `A multiplayer point & click game, and an accompanying game creator toolkit.
+      Built to be used as both a knowledge check and a team building application.
+      The creator tool allowed for the creation of custom escape rooms, with the ability to place and customise assets (in both appearance and behaviour).
+      It also allowed for custom quizzes to be inserted into the game, which could then be used as a knoweldge check for the tested topic.
+      The game itself had multiplayer sessions, which allowed up to 8 players to collaborate in a room at the same.
+      Built using Phaser and React, leveraging web hooks and an authoritative server architecture.`,
+    imageType: "desktop",
+    images: [escapeRoomQuiz],
+    tags: ["React", "Phaser", "TypeScript", "NestJS", "WebSockets"],
   },
   {
     name: "dED Charity Website",
@@ -243,23 +257,11 @@ export const projects: Project[] = [
     client: "Demilitarise Education",
     clientLink: "https://ded1.co",
     description: `Helped a friend build her charity’s website.
-      The website allows for users to contribute together on a database that tracks university spending.
-      It uses NextJS with TailwindCSS on the FE and Django on the BE.
-      I oversaw a redesign, taking responsibility for the front end.`,
+      The website allows for users to browse and contribute to a database that tracks university spending.
+      Built using NextJS and TailwindCSS on the front end and Django on the back end.
+      I oversaw a complete redesign of the front end, while also helping out with designing a new database data model to integrate with the new UX.`,
     imageType: "desktop",
     images: [dedHomepage],
     tags: ["React", "NextJS", "TypeScript", "TailwindCSS", "Python", "Django"],
-  },
-  {
-    name: "My Nephrotic Notebook",
-    link: "https://www.goshdrive.com/academia#:~:text=MSc%20Project%202019-,My%20Nephrotic%20Notebook%20Mobile%20App,-Parents%20of%20children",
-    client: "Great Ormond Street Hospital",
-    clientLink: "https://www.gosh.org/",
-    description: `Led a team of three that designed and built a mobile to help children with Nephrotic Syndrome manage their disease.
-      Project received top marks in our MSc cohort, was published and showcased by DRIVE at GOSH Conference 2019.
-      Also gave me a chance to explore UX/UI design for the first time. I was even [first authoured on a medical journal](https://adc.bmj.com/content/104/Suppl_4/A6.2)!`,
-    imageType: "mobile",
-    images: [nephNoteSplash, nephNoteHomepage, nephNoteEnter],
-    tags: ["Typescript", "Ionic", "Angular"],
   },
 ];

@@ -17,14 +17,15 @@ const ProjectCard = ({
   images,
   imageType,
   tags,
-}: Project & { index: number }) => {
+  rightSide,
+}: Project & { index: number; rightSide?: boolean }) => {
   return (
     <motion.div
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.1 }}
-      variants={fadeIn("up", (index % 2) * 0.25, 1)}
-      className="col-span-2 flex h-full flex-col justify-between gap-5 rounded-2xl bg-card p-8 lg:col-span-1"
+      variants={fadeIn("up", rightSide && index === 0 ? 0.25 : 0, 1)}
+      className="flex flex-col justify-between gap-5 rounded-2xl bg-card p-8 w-full"
     >
       <div>
         <a href={link} target="_blank">
@@ -33,7 +34,9 @@ const ProjectCard = ({
         <a href={clientLink} target="_blank">
           <p className="font-tech text-xl text-secondary">{client}</p>
         </a>
-        <Markdown className={`${styles.cardText} markdown project-description mt-3`}>
+        <Markdown
+          className={`${styles.cardText} markdown project-description mt-3`}
+        >
           {description}
         </Markdown>
         <div className="mt-3 flex flex-wrap gap-2">
@@ -69,16 +72,32 @@ const ProjectCard = ({
 };
 
 const Projects = () => {
+  const firstColLength = Math.ceil(projects.length / 2);
+  const projects1 = projects.slice(0, firstColLength);
+  const projects2 = projects.slice(firstColLength, projects.length);
+
   return (
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubheader}>My Work</p>
         <h2 className={styles.sectionHeader}>Projects</h2>
       </motion.div>
-      <div className="mt-12 grid grid-cols-2 items-center gap-4">
-        {projects.map((project: Project, index: number) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
+      <div className="mt-12 flex gap-4">
+        <div className="flex w-1/2 flex-col flex-wrap items-center gap-4">
+          {projects1.map((project: Project, index: number) => (
+            <ProjectCard key={`project-${index}`} index={index} {...project} />
+          ))}
+        </div>
+        <div className="flex w-1/2 flex-col flex-wrap items-center gap-4">
+          {projects2.map((project: Project, index: number) => (
+            <ProjectCard
+              key={`project-${index}`}
+              index={index}
+              {...project}
+              rightSide
+            />
+          ))}
+        </div>
       </div>
     </>
   );
