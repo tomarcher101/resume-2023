@@ -25,7 +25,7 @@ const ProjectCard = ({
       whileInView="show"
       viewport={{ once: true, amount: 0.1 }}
       variants={fadeIn("up", rightSide && index === 0 ? 0.25 : 0, 1)}
-      className="flex flex-col justify-between gap-5 rounded-2xl bg-card p-8 w-full"
+      className="flex flex-col justify-between gap-5 rounded-2xl bg-card p-8"
     >
       <div>
         <a href={link} target="_blank">
@@ -82,13 +82,13 @@ const Projects = () => {
         <p className={styles.sectionSubheader}>My Work</p>
         <h2 className={styles.sectionHeader}>Projects</h2>
       </motion.div>
-      <div className="mt-12 flex gap-4">
-        <div className="flex w-1/2 flex-col flex-wrap items-center gap-4">
+      <div className="mt-12 flex flex-col gap-4 lg:flex-row">
+        <div className="flex w-full flex-col flex-wrap items-center gap-4 lg:w-1/2">
           {projects1.map((project: Project, index: number) => (
             <ProjectCard key={`project-${index}`} index={index} {...project} />
           ))}
         </div>
-        <div className="flex w-1/2 flex-col flex-wrap items-center gap-4">
+        <div className="flex w-full flex-col flex-wrap items-center gap-4 lg:w-1/2">
           {projects2.map((project: Project, index: number) => (
             <ProjectCard
               key={`project-${index}`}
