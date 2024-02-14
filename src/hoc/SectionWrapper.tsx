@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { styles } from "@/styles";
 
 const variants = {
   hidden: {},
@@ -19,7 +18,7 @@ const SectionWrapper =
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.1 }}
-      className="relative z-0 box-border max-w-7xl px-6 py-6 sm:px-16 sm:py-16 w-full"
+      className="relative z-0 box-border max-w-7xl px-6 py-6 sm:px-16 sm:py-16 overflow-hidden"
       id={idName}
     >
       <Component {...props} />
