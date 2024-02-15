@@ -14,7 +14,7 @@ import {
   docker,
   nextjs,
 } from "@/assets/tech";
-import { codeCamp, daltonMaag, fireTech, play, plum } from "@/assets/companies";
+import { codeCamp, daltonMaag, fireTech, play, plum, akcelo } from "@/assets/companies";
 import escapeRoomQuiz from "@/assets/projects/escape-rooms/quiz.png";
 import beyondJourney from "@/assets/projects/beyond-assessments/journey.png";
 import beyondAchievements from "@/assets/projects/beyond-assessments/achievements.png";
@@ -105,13 +105,27 @@ export const technologies: Technology[] = [
 
 export const experiences: Experience[] = [
   {
+    title: "Senior Frontend Developer",
+    companyName: "Akcelo (Contract)",
+    link: "https://akcelo.com/",
+    icon: akcelo,
+    iconBg: "#FF1E00",
+    iconClass: "h-[75%] w-[75%] rounded-lg",
+    date: "December 2023 - Present",
+    points: [
+      "Working as a Senior Frontend Developer on the McDonald's ANZ project.",
+      "Building and maintaining the software used in McDonald's DriveThrus and instore.",
+      "Responsibilities include reviewing code and mentoring junior developers",
+    ],
+  },
+  {
     title: "Full Stack Developer (frontend focus)",
     companyName: "PLAY",
     link: "https://play-studio.com",
     icon: play,
     iconBg: "#523FFE",
     iconClass: "h-[70%] w-[70%] rounded-lg",
-    date: "June 2021 - Present",
+    date: "June 2021 - October 2023",
     points: [
       "Design and build web and mobile applications, specialising in gamification and web3.",
       "Working across the full stack, but primarily as a front end developer.",
@@ -125,7 +139,7 @@ export const experiences: Experience[] = [
     link: "https://daltonmaag.com",
     icon: daltonMaag,
     iconBg: "#000013",
-    iconClass: "h-[90%] w-[90%] rounded-full",
+    iconClass: "h-[100%] w-[100%] rounded-full",
     date: "April 2020 - June 2021",
     points: [
       "Worked as a web developer, but also as a font developer.",
@@ -140,7 +154,7 @@ export const experiences: Experience[] = [
     link: "https://withplum.com",
     icon: plum,
     iconBg: "#5F09FF",
-    iconClass: "h-[90%] w-[90%] rounded-full",
+    iconClass: "h-[100%] w-[100%] rounded-full",
     date: "Jan 2022 - Jan 2023",
     points: [
       "After completing my MSc, I returned to Plum as a backend software engineer.",
@@ -155,7 +169,7 @@ export const experiences: Experience[] = [
     link: "https://codecamp.com",
     icon: codeCamp,
     iconBg: "#3FC4FF",
-    iconClass: "h-[90%] w-[90%] rounded-full",
+    iconClass: "h-[100%] w-[100%] rounded-full",
     date: "Jan 2022 - Jan 2023",
     points: [
       "During my postgrad, worked as a Lead Teacher for Code Camp.",
@@ -182,7 +196,7 @@ export const experiences: Experience[] = [
     link: "https://withplum.com",
     icon: plum,
     iconBg: "#5F09FF",
-    iconClass: "h-[90%] w-[90%] rounded-full",
+    iconClass: "h-[100%] w-[100%] rounded-full",
     date: "Jan 2022 - Jan 2023",
     points: [
       "Started as an operations intern completing manual operational tasks.",

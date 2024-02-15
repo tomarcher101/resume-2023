@@ -18,7 +18,7 @@ const SectionWrapper =
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.1 }}
-      className="relative z-0 box-border max-w-7xl px-6 py-6 sm:px-16 sm:py-16 overflow-hidden"
+      className="relative z-0 box-border max-w-7xl px-6 py-16 sm:px-16 overflow-hidden w-full"
       id={idName}
     >
       <Component {...props} />

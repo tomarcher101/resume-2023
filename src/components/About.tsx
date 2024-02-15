@@ -6,7 +6,7 @@ import SectionWrapper from "@/hoc/SectionWrapper";
 
 const About = () => {
   return (
-    <div className="flex flex-col justify-between sm:my-10 sm:h-full sm:flex-row">
+    <div className="flex flex-col justify-between sm:my-10 sm:h-full sm:flex-row ">
       <div className="flex flex-col justify-center pb-8 sm:w-[60%] sm:pb-20">
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubheader}>Introduction</p>
@@ -17,9 +17,13 @@ const About = () => {
           className="text-md mt-4 max-w-3xl leading-6 text-secondary sm:text-xl sm:leading-8"
         >
           I'm a software engineer based in Melbourne, currently working as a
-          Full Stack Developer (frontend focused) at{" "}
-          <a href="https://play-studio.com" className="font-bold text-white">
-            PLAY
+          freelance Full Stack Developer at{" "}
+          <a
+            href="https://akcelo.com/"
+            target="_blank"
+            className="font-bold text-white"
+          >
+            Akcelo
           </a>
           . I'm passionate about building products that make a positive impact
           on people's lives and am always looking for opportunities to learn new
