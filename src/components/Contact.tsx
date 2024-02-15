@@ -36,7 +36,7 @@ const Contact = () => {
             </a>
           </p>
           <p className={styles.cardText}>
-            <a href="/TomArcherCV-20231107_compressed.pdf" target="_blank">
+            <a href="/TomArcherCV-20240215.pdf" target="_blank">
               Download my CV
             </a>
           </p>
